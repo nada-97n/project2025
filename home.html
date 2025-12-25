@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدونة مراجعات الكتب</title>
+    <script defer src="script.js"></script>  
+    <link rel="stylesheet" href="style.css">  
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body data-page="home">
+
+     <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">الصفحة الرئيسية</a></li>
+                <li><a href="contactUS.html">تواصل معنا</a></li>
+                <li><a href="aboutUS.html">عن الموقع</a></li>
+                <li><a href="reviews.html">أحدث المراجعات</a></li>
+                <li><a href="add-review.html">أكتب مراجعة</a></li>
+                <li><a href="NewUser.html">إنشاء حساب</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+     <div class="container">
+        
+        <!-- المحتوى الرئيسي -->
+        <div class="main-content">
+            <h1>مرحباً بكم في مدونة مراجعات الكتب</h1>
+            <p>شارك مراجعتك لأي كتاب واستفد من آراء القراء الآخرين.</p>
+       
+        </div>
+
+        <!-- قسم تسجيل الدخول والمراجعات معاً -->
+        <div class="content-wrapper">
+            
+            <!-- نموذج تسجيل الدخول -->
+            <div class="login-section">
+                <h2>تسجيل الدخول / إنشاء حساب</h2><br>
+                <form id="login-form">
+                    <label for="username">اسم المستخدم:</label>
+                    <input type="text" id="username" name="username" required>
+
+                    <label for="password">كلمة المرور:</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <button type="submit">تسجيل الدخول</button>
+                </form>
+                <p>ليس لديك حساب؟ <a href="NewUser.html">إنشاء حساب جديد</a></p>
+            </div>
+
+            <!-- قسم المراجعات -->
+            <div class="reviews-section">
+                <h2>أحدث المراجعات</h2><hr>
+                <div id="latest-reviews"></div>
+            </div>
+
+        </div>
+
+    </div> <!-- نهاية .container -->
+
+    <footer>
+        جميع الحقوق محفوظة &copy; 2025 - مدونة مراجعات الكتب
+    </footer>
+
+</body>
+</html>
