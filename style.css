@@ -1,0 +1,909 @@
+
+/* أنماط عامة لكل الصفحات */
+body {
+    font-family: 'Droid Arabic Kufi', sans-serif;
+    direction: rtl;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    background-color: faf9f6 ;/* استخدام اللون الافتراضي */
+    color: 444444;
+}
+
+ /* تأكد من أن html و body يمتدان على طول الصفحة بالكامل */
+html, body {
+    height: 100%;  /* اجعل الطول 100% لضمان تغطية الصفحة بالكامل */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* الحاوية الرئيسية التي تحتوي على المحتوى */
+.main-content {
+    flex: 1;  /* يسمح لهذا الجزء بالتمدد ليملأ المساحة المتبقية */
+    padding-bottom: 50px; /* تأكد من وجود مسافة أسفل المحتوى إذا كان الفوتر في الأسفل */
+}
+
+
+header {
+    background-color: #225a70;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Almarai', sans-serif;
+    font-weight: 300;
+}
+
+
+
+header h1, 
+header nav a {
+    font-family: 'Almarai', sans-serif;
+    font-weight: 300; /* تأكيد الوزن الخفيف */
+   color: white;
+   font-size: 1rem !important;
+}
+/* فوتر الموقع */
+footer {
+    font-family: 'Almarai', sans-serif;
+    font-weight: 300; /* تأكيد الوزن الخفيف */
+    text-align: center;
+    background-color: #225a70;
+    color: white;
+    padding: 10px;
+    margin-top: auto;
+}
+
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #F0F8FF;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ADD8E6;
+}
+
+
+/* تنسيق عام للصفحات المختلفة */
+body[data-page="contactUS"], 
+body[data-page="aboutUS"] {
+    background-color: #faf9f6;
+}
+
+/* تنسيق العناوين */
+body h1 {
+    font-family: 'Almarai', sans-serif;
+    font-weight: 800; /* وزن خفيف جدًا */
+    text-align: center;
+    color: #2F4F4F;
+    text-align: center;
+    margin-top: 20px;
+}
+ 
+
+
+
+
+/* الأنماط العامة */
+body {
+    font-family: 'Droid Arabic Kufi', sans-serif;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+    background-color: #e7f7f9;
+}
+
+/* صفحة "home" */
+body[data-page="home"] {
+    background: url('images/book.jpg') center/cover fixed; /* تعيين الصورة كخلفية */
+    min-height: 100vh; /* تأكيد أن ارتفاع الصفحة يغطي الشاشة بالكامل */
+    position: relative; /* لجعل الطبقة اللونية تغطي الجسم */
+}
+
+/* طبقة لونية بيضاء فوق الصورة في صفحة "home" */
+body[data-page="home"]::before {
+    content: ""; /* محتوى فارغ لخلق الطبقة */
+    position: fixed; /* تحديد مكان الطبقة بالنسبة للـ body */
+    top: 0;
+    left: 0;
+    width: 100%; /* تغطي العرض بالكامل */
+    height: 100%; /* تغطي الارتفاع بالكامل */
+    background: rgba(255, 255, 255, 0.5); /* طبقة لونية بيضاء مع الشفافية */
+    z-index: -1; /* وضع الطبقة خلف المحتوى */
+}
+
+/* العناوين والفقرات */
+body[data-page="home"] h1, 
+body[data-page="home"] h2, 
+body[data-page="home"] p {
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    color: #225a70;
+}
+
+/* المحتوى الرئيسي */
+body[data-page="home"] .main-content {
+    padding: 50px 0;
+    text-align: center;
+}
+
+body[data-page="home"] .main-content h1 {
+    font-size: 40px;
+    margin: 7px 0 4px;
+}
+
+body[data-page="home"] .main-content p {
+    font-size: 20px;
+    margin: 8px 0 50px;
+}
+
+/* القوائم */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* الحاوية العامة */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* توزيع تسجيل الدخول والمراجعات */
+body[data-page="home"] .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 16px;
+    color: #225a70;
+}
+
+/* تصميم الأقسام */
+body[data-page="home"] .login-section, 
+body[data-page="home"] .reviews-section {
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* تسجيل الدخول */
+body[data-page="home"] .login-section {
+    width: 40%;
+    max-height: 450px;
+    overflow: hidden;
+}
+
+body[data-page="home"] .reviews-section {
+    width: 55%;
+    text-align: center;
+}
+
+/* المدخلات والأزرار */
+body[data-page="home"] .login-section input, 
+body[data-page="home"] .login-section button {
+    width: 98%;
+    padding: 7px;
+    margin: 20px 0;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+body[data-page="home"] .login-section input {
+    border: 1px solid #ccc;
+}
+
+body[data-page="home"] .login-section button {
+    background-color: #225a70;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+body[data-page="home"] .login-section button:hover {
+    background-color: #1b4b5d;
+}
+
+/* بطاقات المراجعات */
+body[data-page="home"] .review-card {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 5px solid #225a70;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body[data-page="home"] .review-card h3 {
+    margin: 0;
+    color: #225a70;
+}
+
+body[data-page="home"] .review-card p {
+    margin: 5px 0;
+    color: #225a70;
+}
+
+body[data-page="home"] .review-card .review-date {
+    font-size: 0.8em;
+    color: gray;
+}
+
+ 
+/* تنسيق عام لصفحة "تواصل معنا" */
+body[data-page="contactUS"] {
+    color: #2F4F4F;
+    font-size: medium;
+    font-family: 'Tajawal', sans-serif;
+}
+
+/* صندوق التواصل */
+#contact-form {
+    background-color: #FFFFFF;
+    width: 50%;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+#contact-form:hover {
+    transform: scale(1.02);
+}
+
+/* تنسيق المدخلات */
+#contact-form label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+    color: #225A70;
+    
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 98%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fbfbfb;
+}
+
+/* زر الإرسال */
+#contact-form button {
+    background-color: #225A70;
+    color: #FFFFFF;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    font-size: larger;
+}
+
+#contact-form button:hover {
+    background-color: #1B4B5D;
+    transform: scale(1.05);
+}
+
+/* صندوق مواقع التواصل */
+#social-media {
+    margin: 50px auto;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 50%;
+    background: linear-gradient(to right, #225A70, #2F4F4F); /* تحسين التصميم */
+}
+
+/* روابط مواقع التواصل */
+.social-links {
+    position: relative;
+    z-index: 1;
+}
+
+.social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.3rem;
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a i {
+    margin-left: 8px;
+    font-size: 1.5rem;
+}
+
+.social-links a:hover {
+    color: #A1E0FF;
+    transform: scale(1.1);
+}
+
+/* تحسين الصورة الخلفية */
+.blurred-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/socialMedia.jpg') center/cover no-repeat;
+    filter: blur(2px) brightness(0.7);
+    z-index: 0;
+    border-radius: 12px;
+}
+
+ 
+
+/* محتوى صفحة "من نحن" */
+body[data-page="aboutUS"] main {
+    width: 85%;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* ترويسة العنوان h1 في صفحة "عنّا" */
+body[data-page="aboutUS"] main h1 {
+    text-align: center;
+    color: #2F4F4F;
+    font-size: 2rem;  /* حجم أكبر لعنوان h1 */
+    margin-bottom: 1rem;  /* تقليل المسافة بين h1 والعناصر التالية */
+   
+}
+body[data-page="aboutUS"] main a {
+    color: #7FA8B5; /* لون الروابط */
+    font-size: 1rem; /* تكبير حجم النص */
+    font-weight: bold; /* جعل الخط أكثر سمكًا */
+    text-decoration: none; /* إزالة التسطير الافتراضي */
+    transition: color 0.3s ease; /* تأثير عند التمرير */
+}
+
+body[data-page="aboutUS"] main a:hover {
+    color: #ADD8E6; /* تغيير اللون عند التمرير */
+    text-decoration: underline; /* إضافة خط تحت النص عند التمرير */
+}
+#welcome-mesage {
+    text-align: center; /* محاذاة النص في المنتصف */
+    margin-bottom: 50px; /* إضافة مسافة تحت النص */
+    font-size: 18px; /* تحديد حجم الخط */
+    color: #2F4F4F; /* تحديد لون النص */
+}
+
+/* العنوان الفرعي h2 في صفحة "عنّا" */
+body[data-page="aboutUS"] main h2 {
+    color: #2F4F4F;
+    margin-bottom: 1.1rem;  /* تقليل المسافة بين h2 والعناصر التالية */
+    font-size: 1.2rem;  /* حجم متوسط أقل من h1 */
+}
+
+/* تنسيق الفقرات (p) والقوائم (ul, li) في صفحة "عنّا" */
+body[data-page="aboutUS"] main p,
+body[data-page="aboutUS"] main ul,
+body[data-page="aboutUS"] main li {
+    color: #444;
+    font-size: 1rem;  /* حجم متوسط للنص */
+    line-height: 1.6;  /* زيادة المسافة بين الأسطر لقراءة أفضل */
+    margin-bottom: 1rem;  /* المسافة بين العناصر لتفادي التداخل */
+}
+
+/* تحسين الفقرة بشكل عام */
+body[data-page="aboutUS"] main p {
+    margin-bottom: 1.8rem;  /* المسافة بين الفقرات */
+}
+
+body[data-page="aboutUS"] .home-image {
+    width: 100%;
+    max-width: 1400px;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+
+
+/* أنماط خاصة بصفحة المراجعات */
+body[data-page="reviews"] {
+    font-family: 'Almarai', sans-serif;
+    direction: rtl;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    background-color: #faf9f6;
+    color: #444444;
+}
+
+body[data-page="reviews"] nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 9;
+}
+
+body[data-page="reviews"] nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+body[data-page="reviews"] nav a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #F0F8FF;
+    transition: color 0.3s ease;
+}
+
+body[data-page="reviews"] nav a:hover {
+    color: #ADD8E6;
+}
+
+/* عنوان الصفحة */
+body[data-page="reviews"] h1 {
+    text-align: center;
+    color: #2F4F4F;
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+/* نموذج البحث */
+body[data-page="reviews"] #search-form {
+    background-color: #FFFFFF;
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+body[data-page="reviews"] #search-form label {
+    font-weight: bold;
+    color: #225a70;
+    font-size: 1.2rem;
+}
+
+body[data-page="reviews"] #search-form input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+body[data-page="reviews"] #search-form input[type="submit"] {
+    background-color: #225a70;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+body[data-page="reviews"] #search-form input[type="submit"]:hover {
+    background-color: #1b4b5d;
+}
+
+/* صندوق عرض المراجعات */
+body[data-page="reviews"] #reviews-container {
+    width: 50%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+/* بطاقة المراجعة */
+body[data-page="reviews"] .review-card {
+    font-family: 'arial', sans-serif;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-left: 5px solid #225a70;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body[data-page="reviews"] .review-card h3 {
+    color: #225a70;
+    margin: 0;
+}
+
+body[data-page="reviews"] .review-card p {
+    font-family: 'Times New Roman', serif;
+    color: #444444;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+body[data-page="reviews"] .review-card .review-date {
+    font-size: 0.8rem;
+   color: gray;
+}
+
+
+/* أنماط عامة */
+body[data-page="add-review"] {
+    font-family: 'Almarai', sans-serif;
+    direction: rtl;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    background-color: #faf9f6;
+    color: #444444;
+}
+
+/* تنسيق التنقل في القائمة */
+body[data-page="add-review"] nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #225a70;
+    text-align: center;
+}
+
+body[data-page="add-review"] nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+  nav a {
+    text-decoration: none;
+    font-weight: 500 !important;
+    font-size: 1rem;
+    color: #F0F8FF;
+    transition: color 0.3s ease;
+}
+
+body[data-page="add-review"] nav a:hover {
+    color: #ADD8E6;
+}
+
+/* تنسيق عنوان الصفحة */
+body[data-page="add-review"] h1 {
+    text-align: center;
+    color: #2F4F4F;
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+/* تنسيق نموذج إضافة المراجعة */
+body[data-page="add-review"] form {
+    background-color: #FFFFFF;
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+body[data-page="add-review"] form label {
+    font-weight: bold;
+    color: #225a70;
+    font-size: 1.2rem;
+    
+}
+
+body[data-page="add-review"] form input[type="text"],
+body[data-page="add-review"] form textarea,
+body[data-page="add-review"] form input[type="file"] {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+body[data-page="add-review"] form textarea {
+    resize: vertical;
+}
+
+body[data-page="add-review"] form input[type="submit"] {
+    background-color: #225a70;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+body[data-page="add-review"] form input[type="submit"]:hover {
+    background-color: #1b4b5d;
+}
+ 
+
+/* أنماط خاصة بصفحة التسجيل */
+body[data-page="register"] {
+    font-family: 'Almarai', sans-serif;
+    direction: rtl;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    color: #444444;
+     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* تغبيش الخلفية */
+body[data-page="register"]::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/Login.jpg'); /* نفس الصورة الخلفية */
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); /* تطبيق تأثير التغبيش */
+    z-index: 1;
+}
+
+/* محتويات الصفحة ستظهر فوق الصورة المغبشة */
+body[data-page="register"] > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* شريط التنقل */
+body[data-page="register"] nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #225a70;
+}
+
+body[data-page="register"] nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+body[data-page="register"] nav a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #F0F8FF;
+    transition: color 0.3s ease;
+}
+
+body[data-page="register"] nav a:hover {
+    color: #ADD8E6;
+}
+
+/* عنوان الصفحة */
+body[data-page="register"] h1 {
+    text-align: center;
+    color: #2F4F4F;
+    font-size: 2rem;
+    margin: 40px 0;
+}
+
+/* نموذج التسجيل */
+body[data-page="register"] form {
+    background-color: #FFFFFF;
+    width: 50%;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+body[data-page="register"] form label {
+    font-weight: bold;
+    color: #225a70;
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: -8px;
+}
+
+body[data-page="register"] form input[type="text"],
+body[data-page="register"] form input[type="email"],
+body[data-page="register"] form input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: block;
+    margin: 10px auto;
+}
+
+body[data-page="register"] form input[type="submit"] {
+    background-color: #225a70;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+body[data-page="register"] form input[type="submit"]:hover {
+    background-color: #1b4b5d;
+    transform: scale(1.05);
+}
+
+
+/* استيراد الخط */
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300&display=swap');
+
+:root { 
+    --background-color: #faf9f6; /* لون الخلفية الأساسي */
+    --text-color: #444444; /* لون النص الأساسي */
+    --nav-bg-color: #2F4F4F; /* لون شريط التنقل */
+    --nav-text-color: #FFFFFF; /* لون النص في التنقل */
+    --box-border-color: #225a70; /* أطراف الصناديق */
+    --box-bg-color: #f9f9f9; /* خلفية الحاويات */
+    --light-bg-color: #fbfbfb; /* خلفية بعض الأقسام */
+    --link-hover-color: #ADD8E6; /* أزرق فاتح عند التمرير */
+    --link-color: #1b4b5d;; /* أزرق باهت */
+}
+
+/* تنسيق عام */
+body[data-page="profile"] {
+    font-family: 'Almarai', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* تنسيق شريط التنقل */
+body[data-page="profile"] nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+body[data-page="profile"] nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+body[data-page="profile"] nav ul li a {
+    text-decoration: none;
+    color: var(--nav-text-color);
+    font-size: 18px;
+    padding: 8px 15px;
+    transition: 0.3s;
+}
+
+body[data-page="profile"] nav ul li a:hover {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    color: #FFFFFF; /* تغيير اللون عند التمرير */
+}
+
+/* تنسيق المحتوى الرئيسي */
+body[data-page="profile"] main {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body[data-page="profile"] h1, 
+body[data-page="profile"] h2 {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* تنسيق الأقسام */
+body[data-page="profile"] #account-info, 
+body[data-page="profile"] #user-reviews {
+    background: var(--light-bg-color);
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+body[data-page="profile"] #reviews-container {
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+/* تنسيق الأزرار */
+body[data-page="profile"] button {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+body[data-page="profile"] button:hover {
+    background-color: var(--secondary-color);
+}
+
+ 
+
+body[data-page="profile"] a:hover {
+    color: var(--link-hover-color);
+}
+
+.review button {
+    margin: 5px;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.review .edit-button {
+    background-color: #486473;
+    color: white;
+}
+
+.review .delete-button {
+    background-color: #3b8dbd;
+    color: white;
+}
+
+.review button:hover {
+    opacity: 0.8;
+   background-color: #3c4447 !important;
+}

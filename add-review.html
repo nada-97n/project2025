@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مدونة مراجعات الكتب</title>
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css"> <!-- يمكنك إضافة ملف CSS لتحسين التنسيق -->
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body data-page="add-review">  
+<header> 
+<nav> 
+<ul> 
+    <li> <a href="home.html"> الصفحة الرئيسية </a></li>
+    <li> <a href="contactUS.html"> تواصل معنا </a></li>
+    <li> <a href="aboutUS.html"> عن الموقع </a></li>
+    <li> <a href="reviews.html"> أحدث المراجعات </a></li>
+    <li> <a href="add-review.html"> أكتب مراجعة </a></li>
+    <li> <a href="NewUser.html"> انشاء حساب</a></li>
+</ul>
+</nav>
+</header>
+<h1>إضافة مراجعة كتاب</h1>
+
+    <!-- نموذج إضافة المراجعة -->
+    <form action="submit_review.php" method="POST" enctype="multipart/form-data">
+        <label for="title">عنوان الكتاب:</label><br>
+        <input type="text" id="title" name="title" placeholder="أدخل عنوان الكتاب" required><br><br>
+
+        <label for="review">نص المراجعة:</label><br>
+        <textarea id="review" name="review" rows="4" placeholder="اكتب مراجعتك هنا" required></textarea><br><br>
+
+        <label for="cover">غلاف الكتاب (اختياري):</label><br>
+        <input type="file" id="cover" name="cover"><br><br>
+
+
+
+
+        
+        <input type="submit" value="إرسال المراجعة">
+    </form>
+    
+</body>
+<footer>
+    جميع الحقوق محفوظة &copy; 2025 - مدونة مراجعات الكتب
+</footer>
+</html>
+
+

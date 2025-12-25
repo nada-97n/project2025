@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب جديد</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css"> <!-- يمكنك إضافة ملف CSS لتحسين التنسيق -->
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300&display=swap" rel="stylesheet">
+
+
+    
+</head>
+<body data-page="register">
+
+    <header> 
+        <nav> 
+        
+        <ul> 
+            <li> <a href="home.html"> الصفحةالرئيسية </a></li>
+            <li> <a href="contactUS.html">  تواصل معنا </a></li>
+            <li> <a href="aboutUS.html"> عن الموقع </a></li>
+            <li> <a href="reviews.html"> أحدث المراجعات </a></li>
+            <li> <a href="add-review.html"> أكتب مراجعة </a></li>
+            <li> <a href="NewUser.html"> انشاء حساب</a></li>
+            
+        </ul>
+        </nav>
+        </header>
+
+
+    <h1>إنشاء حساب جديد</h1>
+    <form action="/submit_registration" method="POST">
+        <label for="username">الاسم الكامل:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="email">البريد الإلكتروني:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">كلمة المرور:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="confirm-password">تأكيد كلمة المرور:</label><br>
+        <input type="password" id="confirm-password" name="confirm-password" required><br><br>
+
+        <input type="submit" value="إنشاء الحساب">
+    </form>
+    <footer>
+        جميع الحقوق محفوظة &copy; 2025 - مدونة مراجعات الكتب
+    </footer>
+</body>
+</html>

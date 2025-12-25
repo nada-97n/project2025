@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدونة مراجعات الكتب</title>
+    <script defer src="script.js"></script> <!-- تأكد من أن ملف script.js متصل -->
+    <link rel="stylesheet" href="style.css"> <!-- يمكنك إضافة ملف CSS لتحسين التنسيق -->
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body data-page="reviews">  <!-- إضافة data-page -->
+  <header> 
+      <nav> 
+          <ul> 
+              <li><a href="home.html">الصفحة الرئيسية</a></li>
+              <li><a href="contactUS.html">تواصل معنا</a></li>
+              <li><a href="aboutUS.html">عن الموقع</a></li>
+              <li><a href="reviews.html">أحدث المراجعات</a></li>
+              <li><a href="add-review.html">أكتب مراجعة</a></li>
+              <li><a href="NewUser.html">إنشاء حساب</a></li>
+          </ul>
+      </nav>
+  </header>
+
+  <h1>مراجعات الكتب</h1>
+
+  <!-- نموذج البحث والتصفية -->
+  <form id="search-form">
+      <label for="search">بحث حسب العنوان:</label><br>
+      <input type="text" id="search" name="search" placeholder="أدخل عنوان الكتاب" required><br><br>
+      <input type="submit" value="بحث">
+  </form>
+
+  <!-- عرض المراجعات -->
+  <div id="reviews-container"></div>
+  <footer>
+    جميع الحقوق محفوظة &copy; 2025 - مدونة مراجعات الكتب
+</footer>
+</body>
+</html>
